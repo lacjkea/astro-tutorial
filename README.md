@@ -57,7 +57,7 @@ Start dev sever
 
 Tjek op
 Astros if sætninger er uncanny:
-{student && <p>I am still in school.</p>}
+`{student && <p>I am still in school.</p>}`
 
 "if all values are truthy, the value of the last operand is returned"
 

@@ -47,8 +47,18 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # lacj notes
 
+from the tutorial: https://docs.astro.build/en/tutorial/1-setup/3/
+
 KEYBOARD SHORTCUT
 To toggle the visibility of the terminal (in VS Code), use Ctrl + J (macOS: Cmd ⌘ + J).
 
 Start dev sever
 "npm run dev" to run dev server & CTRL+C to exit it
+
+Tjek op
+Astros if sætninger er uncanny:
+{student && <p>I am still in school.</p>}
+
+"if all values are truthy, the value of the last operand is returned"
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND

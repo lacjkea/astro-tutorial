@@ -62,3 +62,10 @@ Astros if sætninger er uncanny:
 "if all values are truthy, the value of the last operand is returned"
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
+
+frontmatter - https://docs.astro.build/en/tutorial/3-components/2/
+"in an Astro component’s frontmatter to receive values of title, author, and date as props" write
+`const { title, author, date } = Astro.props;`
+
+To pass values as props to an Astro Component write
+`<BlogPost title="My First Post" author="Dan" date="12 Aug 2022" />`

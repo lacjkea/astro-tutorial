@@ -10,9 +10,9 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# My First Blog Post
+<!-- # My First Blog Post -->
 
-Published on: 2022-07-01
+<!-- Published on: 2022-07-01 -->
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 

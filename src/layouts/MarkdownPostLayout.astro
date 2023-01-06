@@ -1,7 +1,20 @@
 ---
+import { log } from "astro/dist/core/logger/core";
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+
+// import "../styles/global.css";
 ---
 
-<h1>{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
-<slot />
+<!-- <BaseLayout>
+  <h1>{frontmatter.title}</h1> -->
+<BaseLayout pageTitle={frontmatter.title}>
+  <h2>{frontmatter.description}</h2>
+  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+  <p>Written by {frontmatter.author}</p>
+  <ul>
+    {frontmatter.tags.map((tag: String) => <li>{tag}</li>)}
+  </ul>
+  <slot />
+</BaseLayout>

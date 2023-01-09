@@ -24,4 +24,35 @@ const { frontmatter } = Astro.props;
     {frontmatter.tags.map((tag: String) => <li>{tag}</li>)}
   </ul>
   <slot />
+  <div class="tags">
+    {
+      frontmatter.tags.map((oneTag) => (
+        <p class="tag">
+          <a href={`/dyntags/${oneTag}`}>{oneTag}</a>
+        </p>
+      ))
+    }
+  </div>
 </BaseLayout>
+
+<style>
+  a {
+    /* color: #00539f; */
+    color: hotpink;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+  }
+</style>

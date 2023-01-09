@@ -29,6 +29,8 @@ export async function getStaticPaths() {
   //   { params: { tag: "setbacks" }, props: { posts: allPosts } },
   //   { params: { tag: "learning in public" }, props: { posts: allPosts } },
   // ];
+
+  //params: A value that defines the name of a page route generated dynamically.
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) =>
       post.frontmatter.tags.includes(tag)

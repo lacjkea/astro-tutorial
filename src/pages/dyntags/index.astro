@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Many tags";
+
+const allPosts = await Astro.glob("../posts/*.md");
+
+const uniqueTags = [
+  ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+];
+
+console.log(uniqueTags);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Lasse Claes' tags pages</h2>
+  <div class="tags">
+    {
+      uniqueTags.map((tag) => (
+        <p class="tag">
+          <a href={`/dyntags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  a {
+    /* color: #00539f; */
+    color: hotpink;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+  }
+</style>
